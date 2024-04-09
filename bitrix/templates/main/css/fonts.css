@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Pancetta";
+  font-style: medium;
+  font-weight: 400;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Pancetta"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+       url("../fonts/PancettaPro-Medium.woff");
+}
+@font-face {
+  font-family: "FontAwesome5Free";
+  font-style: Bold;
+  font-weight: 900;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("FontAwesome5Free"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+       url("../fonts/FontAwesome5Free-Solid-900.otf");
+}
+@font-face {
+  font-family: "FontAwesome5Brands";
+  font-style: Bold;
+  font-weight: 900;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("FontAwesome5Brands"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+       url("../fonts/Font_Awesome_5_Brands-Regular-400.otf");
+}
+@font-face {
+  font-family: "TT Norms";
+  font-style: Bold;
+  font-weight: 900;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("TT Norms"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+       url("../fonts/Gilroy-Regular.woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: medium;
+  font-weight: 400;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Inter"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+       url("../fonts/Inter.ttf");
+}

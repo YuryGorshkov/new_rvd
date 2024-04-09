@@ -1,0 +1,117 @@
+.request{
+  margin-top: 90px;
+  margin-bottom: 50px;
+}
+.request .container{
+  display: flex;
+  flex-direction: row;
+  background-image: url('https://rvd-rukava.ru/wp-content/uploads/2022/06/catalog-kz-768x447.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  gap: 0 380px;
+  background-position: 240px 20px;
+}
+.request .container .col{
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+}
+.request .container .col:last-child{
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,.2);
+  transition: background 0.3s,border 0.3s,border-radius 0.3s,box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 40px;
+  max-width: 330px;
+}
+.request .container .col p{
+  line-height: 1;
+  color: #374046;
+  font-size: 36px;
+  font-weight: 200;
+  font-family: "Inter",Sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.request .container .col:last-child .title{
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2em;
+  color: #065C9C;
+  font-family: "Inter",Sans-serif;
+}
+.request .container .col:last-child .info{
+  color: #374046;
+  font-size: 16px;
+  font-weight: 300;
+}
+.request .container .col:last-child .privat_policy{
+  color: #BDBDBD;
+  font-family: "FontAwesome5Free",Sans-serif;
+  font-size: 10px;
+  line-height: 1em;
+  height: fit-content;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+}
+.request .container .col p .title{
+  font-size: 35px;
+  color: #065C9C;
+  font-family: "Inter",Sans-serif;
+  font-weight: 600;
+}
+.request .container .col form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.request .container .col form input{
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #0D74B8;
+  border-radius: 55px;
+  font-family: "TT Norms", Sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: #374046;
+  height: 40px;
+  margin: 5px 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.request .container .col form input:last-child{
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  height: 40px;
+  padding-top: 3px;
+  border: none;
+  border-bottom: 3px solid #162D3E;
+  border-radius: 255px;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 5px 12px 0 rgba(6,92,156,.3);
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+  background-image: linear-gradient(90deg,#045088 0%,#065C9C 50%,#045088 100%);
+  background-position: 100% 0;
+  background-size: 200% 200%;
+}

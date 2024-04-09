@@ -1,0 +1,488 @@
+
+.configuration {
+  background-image: url("../img/Rectangle 102.png");
+  background-position: center 4px;
+  background-repeat: no-repeat;
+  height: 625px;
+  padding: 120px 0;
+}
+.configuration::before {
+  content: '';
+  height: 120px;
+  filter: invert(1);
+  width: 100%;
+  position: absolute;
+  margin-top: -120px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpath class='elementor-shape-fill' d='M738,99l262-93V0H0v5.6L738,99z'%3E%3C/path%3E%3C/svg%3E");
+}
+.configuration::after {
+  content: '';
+  transform: translate(0px, -125px) rotate(180deg);
+  z-index: 0;
+  height: 125px;
+  margin-top: 210px;
+  filter: invert(1);
+  width: 100%;
+  position: absolute;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpath class='elementor-shape-fill' d='M738,99l262-93V0H0v5.6L738,99z'%3E%3C/path%3E%3C/svg%3E");
+}
+.configuration .container .configuration_wrapper {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-top: -35px;
+}
+.configuration .container .configuration_wrapper .col {
+  display: flex;
+  flex-direction: column;
+  flex: 35%;
+}
+.configuration .container .configuration_wrapper .col:last-child {
+  background-color: transparent;
+  background-image: linear-gradient(180deg,#FFFFFF 0%,#F4FAFF 100%);
+  box-shadow: 0 4px 20px 0 rgba(6,92,156,.5);
+  transition: background 0.3s,border 0.3s,border-radius 0.3s,box-shadow 0.3s;
+  padding: 40px 22px 40px 10px;
+  border-radius: 20px;
+  flex: 65%;
+}
+.configuration .container .configuration_wrapper .col p {
+  color: #374046;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.2em;
+  font-family: "Inter",Sans-serif;
+}
+.configuration .container .configuration_wrapper .col:last-child img {
+  position: absolute;
+  max-width: 435px;
+  margin: 71px 0px 0px -200px;
+  animation-name: elementor-animation-bob-float, elementor-animation-bob;
+  animation-duration: .3s,1.5s;
+  animation-delay: 0s,.3s;
+  animation-timing-function: ease-out,ease-in-out;
+  animation-iteration-count: 1,infinite;
+  animation-fill-mode: forwards;
+  animation-direction: normal,alternate;
+  z-index: 1;
+}
+.configuration .container .configuration_wrapper .col .title{
+  color: #065C9C;
+  font-size: 44px;
+  font-weight: 600;
+  font-family: "Inter",Sans-serif;
+  margin-bottom: 15px;
+  display: inline-block;
+  line-height: 1em;
+}
+.configuration .container .configuration_wrapper .col:last-child .title{
+  color: #374046;
+  font-size: 26px;
+  font-weight: 300;
+  text-shadow: none;
+  text-align: center;
+}
+.configuration .container .configuration_wrapper .col:last-child .description{
+  color: #065C9C;
+  font-size: 20px;
+  font-weight: 300;
+  text-shadow: none;
+  text-align: center;
+}
+.configuration .container .configuration_wrapper .col:last-child .buttons_wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 325px);
+  gap: 20px 20px;
+  justify-content: end;
+  align-items: center
+}
+.configuration .container .configuration_wrapper .col:last-child .buttons_wrapper p{
+  background-color: #FFF;
+  box-shadow: 0 5px 15px 0 rgba(6,92,156,.23921568627450981);
+  transition: background 0.3s,border 0.3s,border-radius 0.3s,box-shadow 0.3s;
+  margin: 0px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  color: #065C9C;
+  font-family: "Inter",Sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.4em;
+  border-radius: 10px;
+  outline: 1px dashed #065C9C;
+  outline-offset: -5px;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+  z-index: 2;
+}
+.configuration .container .configuration_wrapper .col:last-child .buttons_wrapper p:nth-child(2){
+  align-items: flex-start
+}
+.configuration .container .configuration_wrapper .col:last-child .buttons_wrapper p img {
+  height: 68px;
+  width: 64px;
+  position: relative;
+  margin: 0;
+  animation: none;
+}
+.configuration .container .configuration_wrapper .col:last-child .buttons_wrapper p img:hover {
+  animation-name: elementor-animation-bob-float, elementor-animation-bob;
+  animation-duration: .3s,1.5s;
+  animation-delay: 0s,.3s;
+  animation-timing-function: ease-out,ease-in-out;
+  animation-iteration-count: 1,infinite;
+  animation-fill-mode: forwards;
+  animation-direction: normal,alternate;
+}
+
+.configuration .container .configuration_wrapper .col:last-child .buttons_wrapper button {
+  font-family: "TT Norms", Sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  letter-spacing: 1.5px;
+  text-align: center;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding-top: 3px;
+  border: none;
+  border-bottom: 3px solid #162D3E;
+  border-radius: 255px;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 5px 12px 0 rgba(6,92,156,.3);
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+  background-image: linear-gradient(90deg,#045088 0%,#065C9C 50%,#045088 100%);
+  background-position: 100% 0;
+  background-size: 200% 200%;
+  color: #fff;
+}
+/*.configuration .container .configuration_wrapper .col:last-child .buttons_wrapper button:not(:hover)::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 300px;
+  margin-left: 60px;
+  background: linear-gradient(90deg,rgba(255,255,255,0),#ffffff 50%,rgba(255,255,255,.4),rgba(255,255,255,0));
+  opacity: .6;
+  position: absolute;
+  left: -40px;
+  top: -150px;
+  z-index: 1;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  -webkit-animation-name: slideme;
+  animation-name: slideme;
+  -webkit-animation-duration: 3s;
+  animation-duration: 1.3s;
+  -webkit-animation-delay: 0.05s;
+  animation-delay: 0.05s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}*/
+
+.configuration .modal-dialog, .configuration .modal-content {
+  width: 1200px;
+  max-width: 1200px;
+}
+.configuration .modal-body {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
+.configuration .modal-body .col {
+  display: flex;
+  flex-direction: column;
+  flex: 80%;
+}
+.configuration .modal-body .col:last-child {
+  flex: 20%;
+}
+.configuration .modal-body form div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  display: none;
+  margin-bottom: 30px
+}
+.configuration .modal-body form div .title{
+  color: #162D3E;
+  font-family: "Panceta", Sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+}
+.configuration .modal-body form div .description{
+  color: #7A7A7A;
+  font-family: "Panceta", Sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+}
+.configuration .modal-body form div .inputs_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, calc(50% - 10px));
+  gap: 20px;
+  width: 100%;
+  justify-items: center;
+}
+.configuration .modal-body form div .inputs_container span{
+  display: flex;
+  flex-direction: row;
+  background-color: #065b9a;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  align-items: center;
+  font-family: "TT Norms", Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #FFF;
+}
+.configuration .modal-body form div .inputs_container span input {
+  margin-right: 20px;
+  width: 20px;
+  height: 20px;
+}
+.configuration .modal-body form div .inputs_container span input:checked::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+  background-color: #FFD35E;
+}
+.configuration .modal-body form div .inputs_container .text_input {
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #0D74B8;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+  font-family: "TT Norms", Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2.9em;
+  margin-left: 110%;
+  text-align: center;
+  margin-bottom: 120px;
+}
+.configuration .modal-body form div:nth-child(5) .inputs_container span {
+  display: inline-block;
+  background-color: transparent;
+  padding: 10px 0px;
+}
+.configuration .modal-body form div:nth-child(5) .images_block {
+  display: flex;
+  flex-direction: row;
+  font-family: "Inter", Sans-serif;
+  font-weight: 600;
+  color: #374046;
+  font-size: 60px;
+  width: 100%;
+  justify-content: space-between;
+}
+.configuration .modal-body form div:nth-child(5) .images_block p {
+  color: #374046;
+  font-size: 18px;
+  font-family: "Inter", Sans-serif;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.configuration .modal-body form div:nth-child(5) .images_block p img {
+  max-width: 170px;
+}
+.configuration .modal-body form div:nth-child(5) .inputs_container {
+    grid-template-columns: repeat(auto-fill, calc(33.33333% - 20px));
+  }
+.configuration .modal-body form div:nth-child(5) .inputs_container span .text_input {
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #0D74B8;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+  font-family: "TT Norms", Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2.9em;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  color: black;
+}
+.configuration .modal-body .col:last-child .title{
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #065C9C;
+  color: #FFF;
+  font-family: "Inter", Sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+.configuration .modal-body .col:last-child .question_wrapper {
+  margin: 0 20px;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+  margin: 0 20px 0 20px;
+  padding: 10px;
+}
+.configuration .modal-body .col:last-child .question_wrapper .wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.configuration .modal-body .col:last-child .question_wrapper .wrapper img{
+  max-width: 72px;
+  margin-right: 10px;
+}
+.configuration .modal-body .col:last-child .question_wrapper .wrapper p {
+  color: #7A7A7A;
+  font-family: "TT Norms", Sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2em;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0;
+}
+.configuration .modal-body .col:last-child .question_wrapper .wrapper p .title{
+  color: #000;
+  font-family: "Inter", Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: transparent;
+  display: inline-block;
+  padding: 0;
+}
+.configuration .modal-body .col:last-child .question_wrapper .question {
+  padding: 5px;
+  color: #54595F;
+  font-family: "TT Norms", Sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2em;
+  border-radius: 5px;
+  border: #dcdcdc solid 1px;
+}
+.configuration .modal-body .col:last-child .question_wrapper .wrapper_2 {
+  display: flex;
+  flex-direction: row;
+  color: #162D3E;
+  font-size: 40px;
+  font-weight: 900;
+  font-family: "Inter", Sans-serif;
+  align-items: center;
+}
+.configuration .modal-body .col:last-child .question_wrapper .wrapper_2 p {
+  color: #000;
+  font-family: "TT Norms", Sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+}
+.configuration .modal-body .col:last-child .question_wrapper .wrapper_2 p img {
+  max-width: 120px;
+}
+.configuration .modal-body .buttons_container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  width: 130%;
+}
+.configuration .modal-body .buttons_container button{
+  border-style: solid;
+  border-width: 0 0 3px 0;
+  border-color: #FFC322;
+  box-shadow: 0 5px 10px 0 #EEB931;
+  font-family: "Inter", Sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  letter-spacing: 1px;
+  color: #374046;
+  background-color: #FFD35E;
+  border-radius: 55px 55px 55px 55px;
+  padding: 15px 15px 15px 15px;
+}
+.configuration .modal-body form .show{
+  display: flex;
+}
+.configuration .modal-body .proggressbar_wrapper {
+  padding: 0 10px;
+}
+.configuration .modal-body .proggressbar_wrapper .description{
+  color: #162D3E;
+  font-family: "Inter", Sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+.configuration .modal-body .proggressbar_wrapper .proggressbar {
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+  height: 25px;
+  background-color: #f5f5f5;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+  border-radius: 60px;
+  display: block;
+}
+.configuration .modal-body .proggressbar_wrapper .proggressbar .proggressbar_inner {
+  display: block;
+  width: 4%;
+  height: 25px;
+  background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  -webkit-background-size: 40px 40px;
+  background-size: 40px 40px;
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+  animation: progress-bar-stripes 2s linear infinite;
+  border-radius: 60px;
+  background-color: #FFD35E;
+}
+.configuration .modal-body form div .title_1 {
+  color: #065C9C;
+  font-family: "Inter", Sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+}
+.configuration .modal-body .btn-close {
+  right: 3%;
+  top: 1%;
+}

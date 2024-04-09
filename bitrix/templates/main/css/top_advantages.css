@@ -1,0 +1,40 @@
+.top_advantages .container {
+  display: flex;
+  position: relative;
+  top: 0px;
+  margin-top: 30px;
+}
+.top_advantages .container .top_advantage {
+  width: 25%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.top_advantages .container .top_advantage img{
+  max-width: 230px;
+  transition-duration: .3s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+}
+.top_advantages .container .top_advantage img:hover{
+  transform: translateY(-8px);
+}
+.top_advantages .container .top_advantage .title{
+  color: #065C9C;
+  font-family: "Inter", Sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  text-align: center;
+  padding: 0px;
+  margin-bottom: 10px;
+}
+.top_advantages .container .top_advantage .description{
+  font-family: "Inter", Sans-serif;
+  color: #374046;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2em;
+  text-align: left;
+  padding: 0px 10px;
+}

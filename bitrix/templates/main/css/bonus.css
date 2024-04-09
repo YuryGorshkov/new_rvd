@@ -1,0 +1,168 @@
+.bonus {
+  margin-top: 50px;
+  margin-bottom: 115px;
+}
+.bonus .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+.bonus .container img{
+  position: absolute;
+  z-index: 0;
+  left: 40%;
+  max-width: 525px;
+}
+.bonus .container .col{
+  width: 45%;
+  flex: 45% 0 0;
+  position: relative;
+  z-index: 1
+}
+.bonus .container .col p{
+  color: #374046;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.2em;
+  font-family: "Inter",Sans-serif;
+}
+.bonus .container .col p .title{
+  color: #065C9C;
+  font-size: 36px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+}
+.bonus .container .col .buttons_wrapper {
+  box-shadow: 0 5px 10px 0 rgba(4,80,136,.4);
+  transition: background 0.3s,border 0.3s,border-radius 0.3s,box-shadow 0.3s;
+  margin: 0 120px 0 40px;
+  background-color: transparent;
+  background-image: linear-gradient(200deg,#065C9C 0%,#045088 100%);
+  padding: 10px;
+  border-radius: 10px;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.2em;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  text-align: center;
+}
+.bonus .container .col .buttons_wrapper .privat_policy{
+  padding: 0px;
+  margin-top: 10px;
+}
+.bonus .container .col:last-child{
+  width: 30%;
+  flex: 30% 0 0;
+  box-shadow: 0 5px 15px 0 rgba(6,92,156,.5);
+  transition: background 0.3s,border 0.3s,border-radius 0.3s,box-shadow 0.3s;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.bonus .container .col:last-child p{
+  padding: 0 35px;
+}
+.bonus .container .col:last-child .title{
+  color: #065C9C;
+  font-size: 22px;
+  font-family: "Inter",Sans-serif;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+}
+.bonus .container .col:last-child .description{
+  color: #374046;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2em;
+  font-family: "Inter",Sans-serif;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+}
+.bonus .container .col:last-child form input {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #0D74B8;
+  border-radius: 55px;
+  font-family: "FontAwesome5Free", Sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: #374046;
+  height: 40px;
+  margin: 5px 0;
+  text-align: center;
+}
+.bonus .container .col:last-child form button {
+  width: 100%;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  height: 40px;
+  padding-top: 3px;
+  border: none;
+  border-bottom: 3px solid #162D3E;
+  border-radius: 255px;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 5px 12px 0 rgba(6,92,156,.3);
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+  background-image: linear-gradient(90deg,#045088 0%,#065C9C 50%,#045088 100%);
+  background-position: 100% 0;
+  background-size: 200% 200%;
+  margin: 5px 0;
+}
+/*.bonus .container .col:last-child form button::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 300px;
+  margin-left: 60px;
+  background: linear-gradient(90deg,rgba(255,255,255,0),#ffffff 50%,rgba(255,255,255,.4),rgba(255,255,255,0));
+  opacity: .6;
+  position: absolute;
+  left: -40px;
+  top: -150px;
+  z-index: 1;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  -webkit-animation-name: slideme;
+  animation-name: slideme;
+  -webkit-animation-duration: 3s;
+  animation-duration: 1.3s;
+  -webkit-animation-delay: 0.05s;
+  animation-delay: 0.05s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}*/
+.bonus .container .col:last-child .privat_policy {
+  color: #BDBDBD;
+  font-family: "FontAwesome5Free",Sans-serif;
+  font-size: 10px;
+  line-height: 1em;
+  height: fit-content;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+  text-align: center;
+}

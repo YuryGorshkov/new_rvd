@@ -1,0 +1,424 @@
+header {
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: fit-content;
+}
+.heder-mobile {
+  display: none;
+}
+header .container {
+  display: flex;
+  flex-direction: row;
+  max-height: 105px;
+  width: 1440px;
+  max-width: 1440px;
+  margin: auto;
+}
+header .container .underline {
+  top: 100px;
+  position: absolute;
+  content: " ";
+  width: 1100px;
+  height: 1px;
+  background-color: #065C9C;
+}
+header .container div {
+  width: 25%;
+  padding: 10px;
+}
+header .container .logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+header .container .delivery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+header .container .delivery svg {
+  width: 70px
+}
+header .container .delivery span {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.9em;
+  color: #065C9C;
+  font-family: "Inter",Sans-serif;
+  padding-left: 12px;
+}
+header .container .contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .container .contacts .contacts_wrapper {
+  margin: 0;
+  padding: 0;
+}
+header .container .contacts .contacts_wrapper li {
+  font-size: 14px;
+  font-weight: 300;
+  color: #065C9C;
+  font-family: "Inter",Sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .container .contacts .contacts_wrapper li:first-child:before {
+  content: "\f0e0";
+  font-family: "FontAwesome5Free";
+  font-weight: 900;
+  font-size: 20px;
+  color: #848484;
+  margin-right: 15px;
+}
+header .container .contacts .contacts_wrapper li:last-child:before {
+  content: "\f017";
+  font-family: "FontAwesome5Free";
+  font-weight: 900;
+  font-size: 20px;
+  color: #848484;
+  margin-right: 15px;
+}
+
+header .menu_mobile .delivery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  margin-bottom: 50px;
+}
+
+header .menu_mobile .delivery svg {
+  width: 70px
+}
+header .menu_mobile .delivery span {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.9em;
+  color: #065C9C;
+  font-family: "Inter",Sans-serif;
+  padding-left: 12px;
+}
+header .menu_mobile .contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  margin: 20px 0;
+}
+header .menu_mobile .contacts .contacts_wrapper {
+  margin: 0;
+  padding: 0;
+}
+header .menu_mobile .contacts .contacts_wrapper li {
+  font-size: 14px;
+  font-weight: 300;
+  color: #065C9C;
+  font-family: "Inter",Sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.menu_mobile {
+  z-index: 22;
+  background-color: #fff;
+  padding-bottom: 300%;
+  position: absolute;
+  width: 100%;
+}
+header .menu_mobile .contacts .contacts_wrapper li:first-child:before {
+  content: "\f0e0";
+  font-family: "FontAwesome5Free";
+  font-weight: 900;
+  font-size: 20px;
+  color: #848484;
+  margin-right: 15px;
+}
+header .menu_mobile .contacts .contacts_wrapper li:last-child:before {
+  content: "\f017";
+  font-family: "FontAwesome5Free";
+  font-weight: 900;
+  font-size: 20px;
+  color: #848484;
+  margin-right: 15px;
+}
+
+header .container .telephone {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .menu_mobile .telephone {
+  padding: 0px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .container .telephone a {
+  font-size: 24px;
+  font-weight: 300;
+  color: #065C9C;
+  font-family: "Inter",Sans-serif;
+}
+header .menu_mobile .telephone a {
+  font-size: 24px;
+  font-weight: 300;
+  color: #065C9C;
+  font-family: "Inter",Sans-serif;
+}
+header .container .telephone button {
+  display: flex;
+  font-family: "TT Norms";
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 80%;
+  height: 50px;
+  border: none;
+  border-bottom: 3px solid #162D3E;
+  border-radius: 255px;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 5px 12px 0 rgba(6,92,156,.3);
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+  background-image: linear-gradient(90deg,#045088 0%,#065C9C 50%,#045088 100%);
+  background-position: 100% 0;
+  background-size: 200% 200%;
+}
+/*header .container .telephone button:not(:hover)::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 300px;
+  margin-left: 60px;
+  background: linear-gradient(90deg,rgba(255,255,255,0),#ffffff 50%,rgba(255,255,255,.4),rgba(255,255,255,0));
+  opacity: .6;
+  position: absolute;
+  left: -40px;
+  top: -150px;
+  z-index: 1;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  -webkit-animation-name: slideme;
+  animation-name: slideme;
+  -webkit-animation-duration: 3s;
+  animation-duration: 1.3s;
+  -webkit-animation-delay: 0.05s;
+  animation-delay: 0.05s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}*/
+header .menu_mobile .telephone button {
+  display: flex;
+  font-family: "TT Norms";
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 80%;
+  height: 50px;
+  border: none;
+  border-bottom: 3px solid #162D3E;
+  border-radius: 255px;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 5px 12px 0 rgba(6,92,156,.3);
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+  background-image: linear-gradient(90deg,#045088 0%,#065C9C 50%,#045088 100%);
+  background-position: 100% 0;
+  background-size: 200% 200%;
+}
+/*header .menu_mobile .telephone button:not(:hover)::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 300px;
+  margin-left: 60px;
+  background: linear-gradient(90deg,rgba(255,255,255,0),#ffffff 50%,rgba(255,255,255,.4),rgba(255,255,255,0));
+  opacity: .6;
+  position: absolute;
+  left: -40px;
+  top: -150px;
+  z-index: 1;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  -webkit-animation-name: slideme;
+  animation-name: slideme;
+  -webkit-animation-duration: 3s;
+  animation-duration: 1.3s;
+  -webkit-animation-delay: 0.05s;
+  animation-delay: 0.05s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}*/
+header .container .nav_menu {
+  width: 100%;
+  height: fit-content;
+  margin: 0px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between
+}
+header .container .nav_menu .menu-item{
+  width: calc(100%/7);
+  text-align: center;
+}
+header .container .nav_menu .menu-item a{
+  display: inline-block;
+  font-family: "TT Norms", Sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #374046;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+header .container .nav_menu .menu-item a:hover{
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  color: #065C9C;
+}
+header .menu_mobile .nav_menu {
+  width: 100%;
+  height: fit-content;
+  margin: 0px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header .menu_mobile .nav_menu .menu-item{
+  width: calc(100%);
+  text-align: left;
+}
+header .menu_mobile .nav_menu .menu-item a{
+  display: inline-block;
+  font-family: "TT Norms", Sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #374046;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+
+}
+header .menu_mobile .nav_menu .menu-item a:hover{
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  color: #065C9C;
+}
+header .container h1 {
+  color: #065C9C;
+  font-size: 56px;
+  font-family: "Inter", Sans-serif;
+  font-weight: 600;
+  margin-top: 30px;
+  line-height: 1;
+}
+header .container .description {
+  color: #374046;
+  font-size: 33px;
+  font-weight: 300;
+  line-height: 1.2em;
+  font-family: "Inter", Sans-serif;
+}
+header .container .description span{
+  color: #065C9C;
+}
+header .head_text {
+  height: fit-content;
+  flex-direction: column;
+  max-height: fit-content;
+}
+header .container .advantages {
+  padding: 10px 30px;
+  margin-bottom: 0;
+}
+header .container .advantages li img{
+  height: 60px;
+  width: 60px;
+}
+header .container .advantages li {
+  font-size: 20px;
+  font-weight: 300;
+  color: #065C9C;
+  font-family: "Inter", Sans-serif;
+}
+header .accordion-button {
+  font-family: "Inter", Sans-serif;
+  font-size: 18px;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+}
+header .accordion-button:not(.collapsed) {
+  color: #065C9C;
+  background-color: #fff;
+  box-shadow: none;
+}
+header .accordion-body {
+  padding: 0rem 1.25rem;
+  color: #065C9C;
+  font-family: "Inter", Sans-serif;
+  font-size: 14px;
+}
+header .accordion-button:focus {
+    z-index: 3;
+    border-color: #fff;
+    outline: 0;
+    box-shadow: none;
+}
+#accordion_head {
+  z-index: 22;
+  background-color: #fff;
+  padding-bottom: 300%;
+  position: absolute;
+  width: 100%;
+}

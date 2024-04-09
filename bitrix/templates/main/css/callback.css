@@ -1,0 +1,115 @@
+
+.callback {
+  background-image: url(https://rvd-rukava.ru/wp-content/uploads/2020/07/crossword.png);
+}
+.callback::before {
+  content: '';
+  height: 120px;
+  filter: invert(1);
+  width: 100%;
+  position: absolute;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpath class='elementor-shape-fill' d='M738,99l262-93V0H0v5.6L738,99z'%3E%3C/path%3E%3C/svg%3E");
+}
+.callback::after {
+  content: '';
+  transform: translate(0px, -125px) rotate(180deg);
+  z-index: 0;
+  height: 120px;
+  filter: invert(1);
+  width: 100%;
+  position: absolute;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpath class='elementor-shape-fill' d='M738,99l262-93V0H0v5.6L738,99z'%3E%3C/path%3E%3C/svg%3E");
+}
+.callback .container .callback_wrapper {
+  margin-top: 90px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+.callback .container .callback_wrapper .img_wrapper{
+  width: 50%;
+}
+.callback .container .callback_wrapper .img_wrapper img{
+  width: 320px;
+  position: relative;
+  animation-name: elementor-animation-bob-float, elementor-animation-bob;
+  animation-duration: .3s,1.5s;
+  animation-delay: 0s,.3s;
+  animation-timing-function: ease-out,ease-in-out;
+  animation-iteration-count: 1,infinite;
+  animation-fill-mode: forwards;
+  animation-direction: normal,alternate;
+  left: 20%;
+}
+.callback .container .callback_wrapper .contacts {
+  display: flex;
+  flex-direction: column;
+}
+.callback .container .callback_wrapper .contacts .title{
+  color: #065C9C;
+  font-size: 42px;
+  font-weight: 800;
+  font-family: "Inter",Sans-serif;
+  line-height: 1;
+}
+.callback .container .callback_wrapper .contacts .description_1 {
+  color: #374046;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1;
+  font-family: "Inter",Sans-serif;
+}
+.callback .container .callback_wrapper .contacts .phone {
+  color: #065C9C;
+  font-size: 42px;
+  font-weight: 800;
+  font-family: "Inter",Sans-serif;
+}
+.callback .container .callback_wrapper .contacts .description_2 {
+  color: #374046;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1;
+  font-family: "Inter",Sans-serif;
+}
+.callback .container .callback_wrapper .contacts .buttons_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.callback .container .callback_wrapper .contacts .buttons_wrapper a{
+  width: 130px;
+  background-color: #29A71A;
+  border-radius: 250px;
+  height: fit-content;
+  padding: 10px;
+  font-family: "FontAwesome5Free",Sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  text-align: center;
+  margin: 0 12px;
+}
+.callback .container .callback_wrapper .contacts .buttons_wrapper a:last-child{
+  background-color: #0088cc;
+}
+.callback .container .callback_wrapper .contacts .buttons_wrapper a:hover{
+  background-color: #196710;
+  font-size: 0;
+}
+.callback .container .callback_wrapper .contacts .buttons_wrapper a:last-child:hover{
+  background-color: #045088;
+}
+.callback .container .callback_wrapper .contacts .buttons_wrapper a span{
+  display: none;
+}
+.callback .container .callback_wrapper .contacts .buttons_wrapper a:hover span{
+  display: inline-block;
+  font-size: 13px;
+}

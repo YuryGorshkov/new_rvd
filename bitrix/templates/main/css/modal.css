@@ -1,0 +1,250 @@
+.main_catalog_item_modal .modal-dialog {
+  width: 850px;
+  max-width: 850px;
+}
+.main_catalog_item_modal .modal-dialog .modal-content{
+  width: 850px;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-header .modal-title{
+  font-family: "Inter",Sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #065C9C;
+  text-align: center;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body {
+  padding: 1em 0;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body div{
+  padding: 0 1em;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body .description{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body .description img{
+  max-height: 290px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body .description p{
+  display: flex;
+  flex-direction: column;
+  color: #374046;
+  font-family: "FontAwesome5Free",Sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2em;
+  padding: 20px 10px;
+  max-width: 375px;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body .description p span{
+  color: #065C9C;
+  font-family: "Inter",Sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body .price_request{
+  background-color: #F8F9F9;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body .price_request p{
+  color: #374046;
+  font-size: 26px;
+  font-family: "Inter",Sans-serif;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body .price_request .privat_policy{
+  color: #BDBDBD;
+  font-family: "FontAwesome5Free",Sans-serif;
+  font-size: 10px;
+  line-height: 1em;
+  height: fit-content;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body .price_request form {
+  display: flex;
+  flex-direction: row;
+  gap: 0 10px;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body .price_request form input{
+  width: 33.3333%;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #0D74B8;
+  border-radius: 55px;
+  font-family: "FontAwesome5Free", Sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: #374046;
+  height: 40px;
+  margin: 5px 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body .price_request form input:last-child{
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  height: 40px;
+  padding-top: 3px;
+  border: none;
+  border-bottom: 3px solid #162D3E;
+  border-radius: 255px;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 5px 12px 0 rgba(6,92,156,.3);
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+  background-image: linear-gradient(90deg,#045088 0%,#065C9C 50%,#045088 100%);
+  background-position: 100% 0;
+  background-size: 200% 200%;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body .price_request form input:last-child::after{
+  content: "";
+  display: block;
+  width: 60px;
+  height: 300px;
+  margin-left: 60px;
+  background: linear-gradient(90deg,rgba(255,255,255,0),#ffffff 50%,rgba(255,255,255,.4),rgba(255,255,255,0));
+  opacity: .6;
+  position: absolute;
+  left: -40px;
+  top: -150px;
+  z-index: 100;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  -webkit-animation-name: slideme;
+  animation-name: slideme;
+  -webkit-animation-duration: 3s;
+  animation-duration: 1.3s;
+  -webkit-animation-delay: 0.05s;
+  animation-delay: 0.05s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body .characteristics {
+  padding: 0px;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body .characteristics p{
+  color: #374046;
+  font-size: 26px;
+  font-family: "Inter",Sans-serif;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body .characteristics ul {
+  width: 100%;
+  padding: 1em 0px;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body .characteristics ul li {
+    display: flex;
+    flex-direction: row;
+    background-color: #F8F9F9;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body .characteristics ul li:nth-child(2n) {
+    background-color: #FFF;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body .characteristics ul li span:first-child {
+  color: #065C9C;
+  font-family: "Inter",Sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body .characteristics ul li span:last-child {
+  color: #374046;
+  font-family: "FontAwesome5Free",Sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body .characteristics .img_wrapper {
+  width: 100%;
+  text-align: center;
+}
+.carousel {
+  max-height: 370px;
+  max-width: 440px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-body .description .carousel .carousel-inner .carousel-item img{
+  width: 100%;
+  max-height: auto;
+  border-radius: 0px;
+  box-shadow: none;
+}
+.carousel-control-next-icon , .carousel-control-prev-icon{
+  background-image: none;
+}
+.carousel-control-next, .carousel-control-prev {
+  opacity: 1;
+}
+.carousel-control-next-icon::after {
+  content: "\f054";
+  font-family: "FontAwesome5Free",Sans-serif;
+  color: #065C9C;
+  font-size: 25px;
+  font-weight: 400;
+}
+.carousel-control-prev-icon::after {
+  content: "\f053";
+  font-family: "FontAwesome5Free",Sans-serif;
+  color: #065C9C;
+  font-size: 25px;
+  font-weight: 400;
+}
+.carousel-indicators {
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+}
+.carousel-indicators [data-bs-target] {
+  width: 135px;
+  height: 75px;
+  margin: 0 5px;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+  opacity: 1;
+  filter: brightness(0.4);
+}
+.carousel-indicators .active {
+  filter: brightness(1);
+}
+.main_catalog_item_modal .modal-dialog .modal-content .modal-header .btn-close{
+  right: 5%;
+}
+.fade {opacity: 1;}

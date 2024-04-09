@@ -1,0 +1,91 @@
+
+.years .container h2 {
+  color: #065C9C;
+  font-size: 45px;
+  font-weight: 600;
+  font-family: "Inter",Sans-serif;
+  width: 100%;
+  text-align: center;
+}
+.years .container .description {
+  color: #374046;
+  font-size: 26px;
+  font-weight: 300;
+  font-family: "Inter",Sans-serif;
+  width: 100%;
+  text-align: center;
+}
+.years .container .wrapper {
+  padding: 20px 10px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px 0 rgba(0,0,0,.2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.years .container .wrapper img{
+  max-width: 530px;
+  border-radius: 15px;
+}
+.years .container .wrapper ul li{
+  color: #374046;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.2em;
+  font-family: "Inter",Sans-serif;
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+}
+.years .container .wrapper ul li::before{
+  content: "\f560";
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-family: "FontAwesome5Free";
+  font-weight: 900;
+  font-size: 35px;
+  color: #065C9C;
+  border-color: #065C9C;
+}
+.years .button_mob {
+ display: none;
+}
+.years .button_desk {
+  display: flex;
+  font-family: "TT Norms";
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 50%;
+  height: 50px;
+  border: none;
+  border-bottom: 3px solid #162D3E;
+  border-radius: 255px;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 5px 12px 0 rgba(6,92,156,.3);
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+  background-image: linear-gradient(90deg, #045088 0%, #065C9C 50%, #045088 100%);
+  background-position: 100% 0;
+  background-size: 200% 200%;
+  color: #fff;
+  margin-top: 20px;
+
+}
