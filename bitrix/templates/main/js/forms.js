@@ -39,6 +39,21 @@ $(document).ready(function(){
     return false;
   });
 
+  $('#product_request').submit(function(evt){
+    evt.preventDefault();            
+    $('#footerModal2').modal('hide');
+    
+    var myModal = new bootstrap.Modal(document.getElementById('footerModal3'), {
+      keyboard: false
+    });
+    myModal.toggle();
+
+    //ajax
+
+    evt.target.reset();
+    return false;
+  });
+
   $('#certificate_request').submit(function(evt){
     evt.preventDefault();        
     var $that = $(this),

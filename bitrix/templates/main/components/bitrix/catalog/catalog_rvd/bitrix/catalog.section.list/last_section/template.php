@@ -45,103 +45,40 @@ $strSectionDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_DELET
 $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_CONFIRM'));
 
 ?>
+
 <div class="container container_big">
 	<div class="accordion" id="accordionExample1">
-		<div class="accordion-item">
-			<h2 class="accordion-header" id="headingOne">
-				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-					Название категории
-				</button>
-			</h2>
-			<div id="collapse1" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample1">
-				<div class="accordion-body">
-					<ul>														
-						<li>категори</li>
-						<li>категори</li>
-						<li>категори</li>
-						<li>категори</li>
-						<li>категори</li>
-						<li>категори</li>
-					</ul>
+		<?
+		$arFilter = Array('IBLOCK_ID'=>$arParams["IBLOCK_ID"], 'GLOBAL_ACTIVE'=>'Y');
+		$db_list = CIBlockSection::GetList(Array(), $arFilter, true);
+		
+		?>
+		<?while($ar_result = $db_list->GetNext()){?>
+			<?if($ar_result["DEPTH_LEVEL"] == 1):?>			
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="<?=$ar_result["ID"]?>">								
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?=$ar_result["ID"]?>" aria-expanded="false" aria-controls="collapse<?=$ar_result["ID"]?>">
+						<?=$ar_result["NAME"]?>
+					</button>					
+				</h2>
+				<div id="collapse<?=$ar_result["ID"]?>" class="accordion-collapse collapse" aria-labelledby="<?=$ar_result["ID"]?>" data-bs-parent="#accordionExample1">
+					<div class="accordion-body">
+						<ul>
+							<?
+							$arFilter_c = Array('IBLOCK_ID'=>$arParams["IBLOCK_ID"], 'GLOBAL_ACTIVE'=>'Y');
+							$db_list_c = CIBlockSection::GetList(Array(), $arFilter_c, true);							
+							?>
+							<?while($arSection_c = $db_list_c->GetNext()){?>
+								<?if($arSection_c["DEPTH_LEVEL"] == 2 && $arSection_c["IBLOCK_SECTION_ID"] == $ar_result["ID"]):?>
+									<li><a href="<?=$arSection_c["SECTION_PAGE_URL"]?>"><?=$arSection_c["NAME"]?></a></li>	
+								<?endif;?>								
+							<?}?>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="accordion-item">
-			<h2 class="accordion-header" id="headingOne">
-				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-					Название категории
-				</button>
-			</h2>
-			<div id="collapse2" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample1">
-				<div class="accordion-body">
-					<ul>														
-						<li>категори</li>
-						<li>категори</li>
-						<li>категори</li>
-						<li>категори</li>
-						<li>категори</li>
-						<li>категори</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="accordion-item">
-			<h2 class="accordion-header" id="headingOne">
-				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-					Название категории
-				</button>
-			</h2>
-			<div id="collapse3" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample1">
-				<div class="accordion-body">
-					<ul>														
-						<li>категори</li>
-						<li>категори</li>
-						<li>категори</li>
-						<li>категори</li>
-						<li>категори</li>
-						<li>категори</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="accordion-item">
-			<h2 class="accordion-header" id="headingOne">
-				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-					Название категории
-				</button>
-			</h2>
-			<div id="collapse4" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample1">
-				<div class="accordion-body">
-					<ul>														
-						<li>категори</li>
-						<li>категори</li>
-						<li>категори</li>
-						<li>категори</li>
-						<li>категори</li>
-						<li>категори</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="accordion-item">
-			<h2 class="accordion-header" id="headingOne">
-				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-					Название категории
-				</button>
-			</h2>
-			<div id="collapse5" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample1">
-				<div class="accordion-body">
-					<ul>														
-						<li>категори</li>
-						<li>категори</li>
-						<li>категори</li>
-						<li>категори</li>
-						<li>категори</li>
-						<li>категори</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+			<?endif;?>
+		<?}?>				
 	</div>
 	<div class="image_wrapper">
 		<img src="/bitrix/templates/main/img/rukav_card-nfhydsn2.png (7).png" alt="">

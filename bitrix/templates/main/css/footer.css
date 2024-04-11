@@ -243,7 +243,7 @@ footer .modal-body form button {
   background-size: 200% 200%;
   margin: 5px 0;
 }
-footer .modal-body form button::after {
+/*footer .modal-body form button::after {
   content: "";
   display: block;
   width: 60px;
@@ -269,7 +269,7 @@ footer .modal-body form button::after {
   animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-}
+}*/
 footer .modal-body .privat_policy {
   color: #000;
 }

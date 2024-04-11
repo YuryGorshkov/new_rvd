@@ -172,58 +172,86 @@ $(document).ready(function() {
       },
     }
   });
+  var brandsSlider = new Swiper(".js-see-more-slider", {
+    slidesPerView: 10,
+    spaceBetween: 40,
+    breakpoints: {
+      0: {
+        spaceBetween: 20,
+        slidesPerView: 1.9,
+      },
+      768: {
+        spaceBetween: 20,
+        slidesPerView: 3,
+      },
+      960: {
+        spaceBetween: 20,
+        slidesPerView: 5,
+      },
+    }
+  });
   $(".phone").mask("+7 (999) 999-9999");
 
   if(document.getElementById("count_products")) {
     document.getElementById("modef_num").innerHTML = document.getElementById("count_products").innerHTML;
   }
 
+  $(".switch").click(function() {
+    var swithes = document.querySelectorAll(".switch");
+    var boxes = document.querySelectorAll(".box");
+    if (!this.classList.contains('active')) {
+      Array.prototype.forEach.call(swithes, function(item) {
+        item.classList.remove('active');
+      });
+      Array.prototype.forEach.call(boxes, function(item) {
+        item.classList.remove('active');
+      });
+      document.getElementById('box_'+this.dataset.target).classList.add('active');
+      this.classList.add('active');
+    }
+  });
 
+  var parent = document.querySelector(".range-slider");
+  if (!parent) return;
 
+  var rangeS = parent.querySelectorAll("input[type=range]"),
+    numberS = parent.querySelectorAll("input[type=number]");
 
+  rangeS.forEach(function (el) {
+    el.oninput = function () {
+      var slide1 = parseFloat(rangeS[0].value),
+        slide2 = parseFloat(rangeS[1].value);
 
+      if (slide1 > slide2) {
+        [slide1, slide2] = [slide2, slide1];
+        // var tmp = slide2;
+        // slide2 = slide1;
+        // slide1 = tmp;
+      }
 
+      numberS[0].value = slide1;
+      numberS[1].value = slide2;
+    };
+  });
 
+  $("#add_to_cart").click(function() {
+    document.getElementById('modal_product_id').value = this.dataset.prodid;
+  });
 
+  numberS.forEach(function (el) {
+    el.oninput = function () {
+      var number1 = parseFloat(numberS[0].value),
+        number2 = parseFloat(numberS[1].value);
 
-    var parent = document.querySelector(".range-slider");
-    if (!parent) return;
-  
-    var rangeS = parent.querySelectorAll("input[type=range]"),
-      numberS = parent.querySelectorAll("input[type=number]");
-  
-    rangeS.forEach(function (el) {
-      el.oninput = function () {
-        var slide1 = parseFloat(rangeS[0].value),
-          slide2 = parseFloat(rangeS[1].value);
-  
-        if (slide1 > slide2) {
-          [slide1, slide2] = [slide2, slide1];
-          // var tmp = slide2;
-          // slide2 = slide1;
-          // slide1 = tmp;
-        }
-  
-        numberS[0].value = slide1;
-        numberS[1].value = slide2;
-      };
-    });
-  
-    numberS.forEach(function (el) {
-      el.oninput = function () {
-        var number1 = parseFloat(numberS[0].value),
-          number2 = parseFloat(numberS[1].value);
-  
-        if (number1 > number2) {
-          var tmp = number1;
-          numberS[0].value = number2;
-          numberS[1].value = tmp;
-        }
-  
-        rangeS[0].value = number1;
-        rangeS[1].value = number2;
-      };
-    });
+      if (number1 > number2) {
+        var tmp = number1;
+        numberS[0].value = number2;
+        numberS[1].value = tmp;
+      }
 
+      rangeS[0].value = number1;
+      rangeS[1].value = number2;
+    };
+  });
     
 });

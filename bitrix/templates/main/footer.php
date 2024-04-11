@@ -64,6 +64,39 @@
         </div>
       </div>
 
+      <div class="modal product_modal fade" id="footerModal2" tabindex="-1" aria-labelledby="footerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <p class="title">Отправить заявку</p>
+              <form id="product_request">
+                <input type="hidden" name="model" id="modal_product_id">
+                <p>Имя <span>*</span></p>
+                <input type="name" name="name" placeholder="Введите имя" required>
+                <p>Номер телефона <span>*</span></p>
+                <input class="phone" type="phone" name="phone" placeholder="Введите номер телефона" required>
+                <p>Комментарий</p>
+                <input type="phone" name="comment" placeholder="Введите комментарий">
+                <button type="submit" name="button">Заказать</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal product_modal fade" id="footerModal3" tabindex="-1" aria-labelledby="footerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <img src="<?=SITE_TEMPLATE_PATH?>/img/check_circle.png" alt="">
+              <p class="title title2">Ваш заказ успешно оформлен</p>
+              <button data-bs-dismiss="modal" aria-label="Close" name="button">Закрыть</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <?$APPLICATION->AddHeadScript("https://code.jquery.com/jquery-3.6.3.js");?> 
       <?$APPLICATION->AddHeadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js");?>
       <?$APPLICATION->AddHeadScript("https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js");?>

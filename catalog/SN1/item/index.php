@@ -64,7 +64,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                         </div>
                     </div>
                 </div>
-                <div class="accordion" id="accordionExample1">
+                <div class="accordion accordion_c" id="accordionExample1">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
@@ -120,7 +120,161 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                     <p class="active">999 999 руб.</p>
                     <p>999 999 руб.</p>
                 </div>
-                <button class="add_to_cart">Заказать</button>
+                <button class="add_to_cart" id="add_to_cart" data-prodid="55" data-bs-toggle="modal" data-bs-target="#footerModal2">Заказать</button>
+            </div>
+        </div>
+        <div class="catalog_middle">
+            <div class="buttons_container">
+                <button data-target="1" class="switch active">Технические характеристики</button>
+                <button data-target="2" class="switch">Описание</button>
+            </div>
+            <div id="box_1" class="box active">
+                <ul class="characteristics">
+                    <p class="title">Технические характеристики</p>
+                    <li>
+                        <span>Длина рукава:</span>
+                        <span>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>
+                    </li>
+                    <li>
+                        <span>Внутренний диаметр:</span>
+                        <span>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>
+                    </li>
+                    <li>
+                        <span>Наружный диаметр:</span>
+                        <span>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>
+                    </li>
+                    <li>
+                        <span>Рабочее давление:</span>
+                        <span>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>
+                    </li>
+                    <li>
+                        <span>Материал:</span>
+                        <span>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>
+                    </li>
+                    <li>
+                        <span>Материал внутреннего слоя:</span>
+                        <span>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>
+                    </li>
+                    <li>
+                        <span>Min рабочая температура:</span>
+                        <span>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>
+                    </li>
+                    <li>
+                        <span>Max рабочая температура:</span>
+                        <span>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>
+                    </li>
+                    <li>
+                        <span>Вес нетто:</span>
+                        <span>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>
+                    </li>
+                    <li>
+                        <span>Габариты без упаковки:</span>
+                        <span>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>
+                    </li>
+                </ul>
+            </div>
+            <div id="box_2" class="box">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis aliquam nisi. Sed dignissim efficitur mi, sollicitudin maximus nisi feugiat nec.<br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis aliquam nisi. Sed dignissim efficitur mi, sollicitudin maximus nisi feugiat nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis aliquam nisi. Sed dignissim efficitur mi, sollicitudin maximus nisi feugiat nec. 
+                </p>
+            </div>
+        </div>
+        <div class="catalog_bottom">
+            <h1>Смотрите также</h1>
+            <div class="js-see-more-slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <div class="img_wrapper">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/img/rukav_card-nfhydsn2.png (12).png" alt="">
+                            </div>
+                            <p class="in_stock">В наличии</p>
+                            <p class="title">Название товара</p>
+                            <button class="to_cart">Приобрести</button>
+                        </div>             
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <div class="img_wrapper">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/img/rukav_card-nfhydsn2.png (12).png" alt="">
+                            </div>
+                            <p class="in_stock">В наличии</p>
+                            <p class="title">Название товара</p>
+                            <button class="to_cart">Приобрести</button>
+                        </div>             
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <div class="img_wrapper">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/img/rukav_card-nfhydsn2.png (12).png" alt="">
+                            </div>
+                            <p class="in_stock">В наличии</p>
+                            <p class="title">Название товара</p>
+                            <button class="to_cart">Приобрести</button>
+                        </div>             
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <div class="img_wrapper">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/img/rukav_card-nfhydsn2.png (12).png" alt="">
+                            </div>
+                            <p class="in_stock">В наличии</p>
+                            <p class="title">Название товара</p>
+                            <button class="to_cart">Приобрести</button>
+                        </div>             
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <div class="img_wrapper">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/img/rukav_card-nfhydsn2.png (12).png" alt="">
+                            </div>
+                            <p class="in_stock">В наличии</p>
+                            <p class="title">Название товара</p>
+                            <button class="to_cart">Приобрести</button>
+                        </div>             
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <div class="img_wrapper">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/img/rukav_card-nfhydsn2.png (12).png" alt="">
+                            </div>
+                            <p class="in_stock">В наличии</p>
+                            <p class="title">Название товара</p>
+                            <button class="to_cart">Приобрести</button>
+                        </div>             
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <div class="img_wrapper">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/img/rukav_card-nfhydsn2.png (12).png" alt="">
+                            </div>
+                            <p class="in_stock">В наличии</p>
+                            <p class="title">Название товара</p>
+                            <button class="to_cart">Приобрести</button>
+                        </div>             
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <div class="img_wrapper">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/img/rukav_card-nfhydsn2.png (12).png" alt="">
+                            </div>
+                            <p class="in_stock">В наличии</p>
+                            <p class="title">Название товара</p>
+                            <button class="to_cart">Приобрести</button>
+                        </div>             
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <div class="img_wrapper">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/img/rukav_card-nfhydsn2.png (12).png" alt="">
+                            </div>
+                            <p class="in_stock">В наличии</p>
+                            <p class="title">Название товара</p>
+                            <button class="to_cart">Приобрести</button>
+                        </div>             
+                    </div>
+                </div>
             </div>
         </div>
     </div>

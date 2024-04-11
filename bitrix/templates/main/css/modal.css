@@ -118,7 +118,7 @@
   background-position: 100% 0;
   background-size: 200% 200%;
 }
-.main_catalog_item_modal .modal-dialog .modal-content .modal-body .price_request form input:last-child::after{
+/*.main_catalog_item_modal .modal-dialog .modal-content .modal-body .price_request form input:last-child::after{
   content: "";
   display: block;
   width: 60px;
@@ -144,7 +144,7 @@
   animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-}
+}*/
 .main_catalog_item_modal .modal-dialog .modal-content .modal-body .characteristics {
   padding: 0px;
 }
@@ -248,3 +248,80 @@
   right: 5%;
 }
 .fade {opacity: 1;}
+
+footer .product_modal .modal-content {
+  background-image: none;
+}
+footer .product_modal .modal-content .title{
+  text-align: left;
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+footer .product_modal .modal-body {
+  width: 100%;
+}
+footer .product_modal .modal-content p {
+  width: 100%;
+  text-align: left;
+  font-family: "Inter";
+  font-size: 14;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+footer .product_modal .modal-content p span {
+  padding-bottom: 3px;
+  color: red;
+}
+footer .product_modal .modal-content form input {
+  border-color: #e1e1e1;
+}
+footer .product_modal .modal-content button:not(.btn-close) {
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  height: 40px;
+  padding-top: 3px;
+  border: none;
+  border-bottom: 3px solid #162D3E;
+  border-radius: 255px;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 5px 12px 0 rgba(6,92,156,.3);
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+  background-image: linear-gradient(90deg,#045088 0%,#065C9C 50%,#045088 100%);
+  background-position: 100% 0;
+  background-size: 200% 200%;
+  margin-top: 15px;
+  box-shadow: none;
+  height: 50px;
+  border-bottom: none;
+  width: 100%;
+}
+footer .product_modal .modal-content .btn-close {
+  margin: 0px;
+  right: 15px;
+  filter: invert(1) sepia(1) hue-rotate(147deg) saturate(50) brightness(0.6);
+  opacity: 1;
+}
+footer .product_modal .modal-content .title2 {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+footer .product_modal .modal-content img {
+  margin-top: 40px;
+}
