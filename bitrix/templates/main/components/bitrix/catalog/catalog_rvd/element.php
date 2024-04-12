@@ -29,8 +29,7 @@ else
 
 $isSidebar = ($arParams['SIDEBAR_DETAIL_SHOW'] == 'Y' && !empty($arParams['SIDEBAR_PATH']));
 ?>
-<div class='row'>
-	<div class='<?=($isSidebar ? 'col-md-9 col-sm-8' : 'col-xs-12')?>'>
+
 		<?
 		if ($arParams["USE_COMPARE"] === "Y")
 		{
@@ -330,5 +329,4 @@ $isSidebar = ($arParams['SIDEBAR_DETAIL_SHOW'] == 'Y' && !empty($arParams['SIDEB
 			
 		}
 		?>
-	</div>
-</div>
+	

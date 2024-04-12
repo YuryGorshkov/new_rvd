@@ -118,78 +118,24 @@ $arParams['MESS_BTN_LAZY_LOAD'] = $arParams['MESS_BTN_LAZY_LOAD'] ?: Loc::getMes
 
 $obName = 'ob'.preg_replace('/[^a-zA-Z0-9_]/', 'x', $this->GetEditAreaId($navParams['NavNum']));
 $containerName = 'container-'.$navParams['NavNum'];
-?>		
-		
-<div class="products">
-	<div class="sort">
-		<div class="dropdown">
-			<button id="sort_menu_title" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-				Сортировать по
-			</button>
-			<ul class="dropdown-menu" id="sort_menu" aria-labelledby="dropdownMenuButton1">
-				<li><a class="dropdown-item" href="#">Цене</a></li>
-				<li><a class="dropdown-item" href="#">Популярности</a></li>
-			</ul>
-		</div>
-		<p>Количество товаров: <span id="count_products"><?=count($arResult["ITEMS"])?></span></p>
-	</div>
-	<div class="row big_row">
-		<div class="col">
-			Диаметр
-		</div>
-		<div class="col">
-			Название
-		</div>
-		<div class="col">
-			Цена
-		</div>
-		<div class="col">
-			В корзину
+?>
+
+<div class="catalog_bottom">
+	<h1>Смотрите также</h1>
+	<div class="js-see-more-slider swiper">
+		<div class="swiper-wrapper">
+			<?foreach($arResult["ITEMS"] as $arItem):?>
+				<div class="swiper-slide">
+					<div class="item">
+						<div class="img_wrapper">
+							<img src="<?=CFile::GetPath($arItem["PROPERTIES"]["IMAGE_1"]["VALUE"])?>" alt="">
+						</div>
+						<p class="in_stock">В наличии</p>
+						<p class="title"><?=$arItem["NAME"]?></p>
+						<button class="to_cart">Приобрести</button>
+					</div>             
+				</div>
+			<?endforeach;?>
 		</div>
 	</div>
-	<?
-	$arFilter = Array('IBLOCK_ID'=>$arParams["IBLOCK_ID"], 'GLOBAL_ACTIVE'=>'Y', 'SECTION_ID'=>$arParams["PERSONAL_SECTION_ID"]);
-	$db_list = CIBlockSection::GetList(Array($by=>$order), $arFilter, true);
-	
-	echo $db_list->NavPrint($arIBTYPE["SECTION_NAME"]);
-	while($ar_result = $db_list->GetNext())
-	{
-	?>
-		<div class="row row_products big_row">
-			<div class="col title">
-				<?=$ar_result["NAME"]?>
-			</div>
-			<div class="col">
-				<?foreach($arResult["ITEMS"] as $arItem):?>
-					<?if($arItem["~IBLOCK_SECTION_ID"] == $ar_result["ID"]):?>
-						<div class="row">
-							<a href="<?=$arItem["DETAIL_PAGE_URL"]?>">
-								<?=$arItem["NAME"]?>
-							</a> 
-						</div>
-					<?endif;?>
-				<?endforeach;?>
-			</div>
-			<div class="col">
-				<?foreach($arResult["ITEMS"] as $arItem):?>
-					<?if($arItem["~IBLOCK_SECTION_ID"] == $ar_result["ID"]):?>
-						<div class="row">
-							<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?> руб.
-						</div>
-					<?endif;?>
-				<?endforeach;?>
-			</div>
-			<div class="col">
-				<?foreach($arResult["ITEMS"] as $arItem):?>
-					<?if($arItem["~IBLOCK_SECTION_ID"] == $ar_result["ID"]):?>
-						<div class="row">
-							<button class="to_cart" data-target="<?=$arItem["ID"]?>"></button> 
-						</div>
-					<?endif;?>
-				<?endforeach;?>
-			</div>
-		</div>	
-	<?
-	}			
-	?>			
 </div>

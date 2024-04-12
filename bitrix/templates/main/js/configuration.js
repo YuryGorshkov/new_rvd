@@ -209,6 +209,11 @@ $(document).ready(function() {
       document.getElementById('box_'+this.dataset.target).classList.add('active');
       this.classList.add('active');
     }
+  });  
+
+  $(".add_to_cart").click(function() {
+    document.getElementById('modal_product_id').value = this.dataset.prodid;
+    console.log(this);
   });
 
   var parent = document.querySelector(".range-slider");
@@ -232,10 +237,6 @@ $(document).ready(function() {
       numberS[0].value = slide1;
       numberS[1].value = slide2;
     };
-  });
-
-  $("#add_to_cart").click(function() {
-    document.getElementById('modal_product_id').value = this.dataset.prodid;
   });
 
   numberS.forEach(function (el) {

@@ -42,13 +42,24 @@ $(document).ready(function(){
   $('#product_request').submit(function(evt){
     evt.preventDefault();            
     $('#footerModal2').modal('hide');
-    
-    var myModal = new bootstrap.Modal(document.getElementById('footerModal3'), {
-      keyboard: false
-    });
-    myModal.toggle();
 
-    //ajax
+    var $that = $(this),
+    formData = new FormData($that.get(0));
+    $.ajax({
+      url: "/bitrix/templates/main/ajax/save_form_item.php", // путь к php-обработчику
+      type: 'POST', // метод передачи данных
+      contentType: false,
+      processData: false,
+      data: formData,
+      success: function(data){
+        if(data){
+          var myModal = new bootstrap.Modal(document.getElementById('footerModal3'), {
+            keyboard: false
+          });
+          myModal.toggle();
+        }
+      }
+    });
 
     evt.target.reset();
     return false;
