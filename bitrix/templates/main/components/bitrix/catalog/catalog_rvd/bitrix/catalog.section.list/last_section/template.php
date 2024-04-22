@@ -70,7 +70,32 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 							?>
 							<?while($arSection_c = $db_list_c->GetNext()){?>
 								<?if($arSection_c["DEPTH_LEVEL"] == 2 && $arSection_c["IBLOCK_SECTION_ID"] == $ar_result["ID"]):?>
-									<li><a href="<?=$arSection_c["SECTION_PAGE_URL"]?>"><?=$arSection_c["NAME"]?></a></li>	
+									<li>
+										<div class="accordion" id="accordionExample<?=$arSection_c["ID"]?>">			
+											<div class="accordion-item">
+												<h2 class="accordion-header" id="<?=$arSection_c["ID"]?>">								
+													<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?=$arSection_c["ID"]?>" aria-expanded="false" aria-controls="collapse<?=$arSection_c["ID"]?>">
+														<?=$arSection_c["NAME"]?>
+													</button>					
+												</h2>
+												<div id="collapse<?=$arSection_c["ID"]?>" class="accordion-collapse collapse" aria-labelledby="<?=$arSection_c["ID"]?>" data-bs-parent="#accordionExample<?=$arSection_c["ID"]?>">
+													<div class="accordion-body">
+														<ul>
+															<?
+															$arFilter_cc = Array('IBLOCK_ID'=>$arParams["IBLOCK_ID"], 'GLOBAL_ACTIVE'=>'Y');
+															$db_list_cc = CIBlockSection::GetList(Array(), $arFilter_cc, true);							
+															?>
+															<?while($arSection_cc = $db_list_cc->GetNext()){?>
+																<?if($arSection_cc["DEPTH_LEVEL"] == 3 && $arSection_cc["IBLOCK_SECTION_ID"] == $arSection_c["ID"]):?>	
+																	<li><a href="<?=$arSection_cc["SECTION_PAGE_URL"]?>"><?=$arSection_cc["NAME"]?></a></li>	
+																<?endif;?>								
+															<?}?>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>	
 								<?endif;?>								
 							<?}?>
 						</ul>

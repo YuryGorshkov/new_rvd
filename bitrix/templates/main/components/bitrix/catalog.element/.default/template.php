@@ -231,15 +231,15 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 			<?
 			function captionF($caption) {
 				$encoding = 'UTF-8';
-				$needMAXlength = '128'; //Обрезаем до.. символов
-				$caption = $caption . ' '; //Добавляем в конце пробел чтоб "точно был"
+				$needMAXlength = '128'; 
+				$caption = $caption . ' '; 
 				$capI = 0;
 				do {
 					$captionarr[$capI] = mb_substr($caption, 0, $needMAXlength, $encoding);
 					$captionarr[$capI] = mb_strrchr($captionarr[$capI], ' ', TRUE, $encoding);
 					$caption = str_replace($captionarr[$capI], '', $caption);
 					$capI++;
-				} while (mb_strlen($caption, $encoding) > 1); //При ">0" скрипт падал..
+				} while (mb_strlen($caption, $encoding) > 1); 
 				return $captionarr;
 			}
 			$new_text = captionF($arResult["DETAIL_TEXT"]);
@@ -268,28 +268,28 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                             <ul class="characteristics">
                                 <p class="title">Технические характеристики</p>
                                 <li>
-                                    <span>Длина рукава:</span>
-                                    <span><?=$arResult["PROPERTIES"]["LENGHT"]["VALUE"]?></span>
+                                    <span>DN:</span>
+                                    <span><?=$arResult["PROPERTIES"]["DN"]["VALUE"]?></span>
                                 </li>
                                 <li>
-                                    <span>Внутренний диаметр:</span>
-                                    <span><?=$arResult["PROPERTIES"]["DIAMETER"]["VALUE"]?></span>
+                                    <span>D (внутр.), ":</span>
+                                    <span><?=$arResult["PROPERTIES"]["DIAM_IN"]["VALUE"]?></span>
                                 </li>
                                 <li>
-                                    <span>Наружный диаметр:</span>
-                                    <span><?=$arResult["PROPERTIES"]["OUT_DIAMETER"]["VALUE"]?></span>
+                                    <span>Bar:</span>
+                                    <span><?=$arResult["PROPERTIES"]["BAR"]["VALUE"]?></span>
                                 </li>
                                 <li>
-                                    <span>Рабочее давление:</span>
-                                    <span><?=$arResult["PROPERTIES"]["WORK_PRESSURE"]["VALUE"]?></span>
+                                    <span>Bar на разрыв:</span>
+                                    <span><?=$arResult["PROPERTIES"]["BAR_GAP"]["VALUE"]?></span>
                                 </li>
                                 <li>
-                                    <span>Материал:</span>
-                                    <span><?=$arResult["PROPERTIES"]["MATERIAL"]["VALUE"]?></span>
+                                    <span>R min, мм:</span>
+                                    <span><?=$arResult["PROPERTIES"]["R_MIN"]["VALUE"]?></span>
                                 </li>
                                 <li>
-                                    <span>Материал внутреннего слоя:</span>
-                                    <span><?=$arResult["PROPERTIES"]["MATERIAL_IN"]["VALUE"]?></span>
+                                    <span>Вес, кг/м:</span>
+                                    <span><?=$arResult["PROPERTIES"]["WEIGHT"]["VALUE"]?></span>
                                 </li>
                             </ul>
                             </button>
@@ -317,7 +317,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 					<?
 					$price = $arResult["PROPERTIES"]["PRICE"]["VALUE"];
 					if(!empty($arResult["PROPERTIES"]["PRICE"]["VALUE"])){
-						$price = ($arResult["PROPERTIES"]["PRICE"]["VALUE"] * (100 - $arResult["PROPERTIES"]["DISCOUNT"]["VALUE"]))/100;
+						$price = ($arResult["PROPERTIES"]["PRICE"]["VALUE"] * (100 - intval($arResult["PROPERTIES"]["DISCOUNT"]["VALUE"])))/100;
 					}
 					?>					
                     <p class="active"><?=$price?> руб.</p>
@@ -336,46 +336,31 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
             <div id="box_1" class="box active">
                 <ul class="characteristics">
                     <p class="title">Технические характеристики</p>
+					
                     <li>
-                        <span>Длина рукава:</span>
-                        <span><?=$arResult["PROPERTIES"]["LENGHT"]["VALUE"]?></span>
-                    </li>
-                    <li>
-                        <span>Внутренний диаметр:</span>
-                        <span><?=$arResult["PROPERTIES"]["DIAMETER"]["VALUE"]?></span>
-                    </li>
-                    <li>
-                        <span>Наружный диаметр:</span>
-                        <span><?=$arResult["PROPERTIES"]["OUT_DIAMETER"]["VALUE"]?></span>
-                    </li>
-                    <li>
-                        <span>Рабочее давление:</span>
-                        <span><?=$arResult["PROPERTIES"]["WORK_PRESSURE"]["VALUE"]?></span>
-                    </li>
-                    <li>
-                        <span>Материал:</span>
-                        <span><?=$arResult["PROPERTIES"]["MATERIAL"]["VALUE"]?></span>
-                    </li>
-                    <li>
-                        <span>Материал внутреннего слоя:</span>
-                        <span><?=$arResult["PROPERTIES"]["MATERIAL_IN"]["VALUE"]?></span>
-                    </li>
-                    <li>
-                        <span>Min рабочая температура:</span>
-                        <span><?=$arResult["PROPERTIES"]["MIN_TEMPERATURE"]["VALUE"]?></span>
-                    </li>
-                    <li>
-                        <span>Max рабочая температура:</span>
-                        <span><?=$arResult["PROPERTIES"]["MAX_TEMPERATURE"]["VALUE"]?></span>
-                    </li>
-                    <li>
-                        <span>Вес нетто:</span>
-                        <span><?=$arResult["PROPERTIES"]["WEIGHT_NETTO"]["VALUE"]?></span>
-                    </li>
-                    <li>
-                        <span>Габариты без упаковки:</span>
-                        <span><?=$arResult["PROPERTIES"]["DIMENSIONS_NETTO"]["VALUE"]?></span>
-                    </li>
+						<span>DN:</span>
+						<span><?=$arResult["PROPERTIES"]["DN"]["VALUE"]?></span>
+					</li>
+					<li>
+						<span>D (внутр.), ":</span>
+						<span><?=$arResult["PROPERTIES"]["DIAM_IN"]["VALUE"]?></span>
+					</li>
+					<li>
+						<span>Bar:</span>
+						<span><?=$arResult["PROPERTIES"]["BAR"]["VALUE"]?></span>
+					</li>
+					<li>
+						<span>Bar на разрыв:</span>
+						<span><?=$arResult["PROPERTIES"]["BAR_GAP"]["VALUE"]?></span>
+					</li>
+					<li>
+						<span>R min, мм:</span>
+						<span><?=$arResult["PROPERTIES"]["R_MIN"]["VALUE"]?></span>
+					</li>
+					<li>
+						<span>Вес, кг/м:</span>
+						<span><?=$arResult["PROPERTIES"]["WEIGHT"]["VALUE"]?></span>
+					</li>
                 </ul>
             </div>
             <div id="box_2" class="box">
@@ -426,7 +411,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 				"FILTER_NAME" => "arrFilter",
 				"HIDE_NOT_AVAILABLE" => "N",
 				"HIDE_NOT_AVAILABLE_OFFERS" => "N",
-				"IBLOCK_ID" => "21",
+				"IBLOCK_ID" => "23",
 				"IBLOCK_TYPE" => "catalog",
 				"INCLUDE_SUBSECTIONS" => "Y",
 				"LABEL_PROP" => array(
@@ -467,11 +452,29 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 				"PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
 				"PRODUCT_SUBSCRIPTION" => "Y",
 				"PROPERTY_CODE" => array(
-					0 => "",
-					1 => "IMAGE_1",
-					2 => "",
+					0 => "BAR",
+					1 => "BAR_GAP",
+					2 => "DIAM_IN",
+					3 => "DN",
+					4 => "R_MIN",
+					5 => "WEIGHT",
+					6 => "MANUFACTURER",
+					7 => "DISCOUNT",
+					8 => "PRICE",
+					9 => "IMAGE_1",
+					10 => "",
 				),
 				"PROPERTY_CODE_MOBILE" => array(
+					0 => "BAR",
+					1 => "BAR_GAP",
+					2 => "DIAM_IN",
+					3 => "DN",
+					4 => "R_MIN",
+					5 => "WEIGHT",
+					6 => "MANUFACTURER",
+					7 => "DISCOUNT",
+					8 => "PRICE",
+					9 => "IMAGE_1",
 				),
 				"RCM_PROD_ID" => $_REQUEST["PRODUCT_ID"],
 				"RCM_TYPE" => "personal",
@@ -480,8 +483,14 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 				"SECTION_ID_VARIABLE" => "SECTION_ID",
 				"SECTION_URL" => "",
 				"SECTION_USER_FIELDS" => array(
-					0 => "",
-					1 => "",
+					0 => "UF_ARM",
+					1 => "UF_SHELL",
+					2 => "UF_TEMP",
+					3 => "UF_PRESSURE",
+					4 => "UF_APPLICATION",
+					5 => "UF_DIAMETER",
+					6 => "UF_MAIN_PAGE",
+					7 => "",
 				),
 				"SEF_MODE" => "N",
 				"SET_BROWSER_TITLE" => "Y",

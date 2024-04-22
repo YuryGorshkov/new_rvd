@@ -260,12 +260,13 @@ footer .product_modal .modal-content .title{
 }
 footer .product_modal .modal-body {
   width: 100%;
+  padding: 35px;
 }
 footer .product_modal .modal-content p {
   width: 100%;
   text-align: left;
   font-family: "Inter";
-  font-size: 14;
+  font-size: 14px;
   margin-bottom: 0px;
   margin-top: 10px;
 }
@@ -309,6 +310,7 @@ footer .product_modal .modal-content button:not(.btn-close) {
   height: 50px;
   border-bottom: none;
   width: 100%;
+  font-size: 14px;
 }
 footer .product_modal .modal-content .btn-close {
   margin: 0px;

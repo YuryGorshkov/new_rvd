@@ -51,8 +51,9 @@
   left: 97%;
   z-index: 2;
   width: 768px;
-  display: grid;
-  height: 505px;
+  display: grid;  
+  min-height: 345px;
+  height: fit-content;
   border-radius: 10px;
   grid-template-columns: repeat(auto-fill, 245px);
 }
@@ -243,4 +244,11 @@
   font-weight: 900;
   padding: 0;
   cursor: pointer;
+}
+.top_slider .container .menu .dop_menu .accordion-button::after {
+  background-image: none;
+  content: "\f067";
+  font-family: "FontAwesome5Free";
+  font-size: 16px;
+  width: fit-content;
 }

@@ -161,16 +161,16 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 							$boolFirst = true;
 							foreach ($arResult['SECTIONS'] as &$arSection)
 							{
-								
 								$this->AddEditAction($arSection['ID'], $arSection['EDIT_LINK'], $strSectionEdit);
 								$this->AddDeleteAction($arSection['ID'], $arSection['DELETE_LINK'], $strSectionDelete, $arSectionDeleteParams);?>
-								<?if(!empty($arSection["PICTURE"]["SRC"])):?>
+								<?if(!empty($arSection["UF_MAIN_PAGE"])):?>
 								<div class="swiper-slide">
 									<div class="item">
 										<div class="img_wrapper">
 											<img src="<?=$arSection["PICTURE"]["SRC"]?>" alt="">
 										</div>
-										<p class="title"><?=$arSection["NAME"]?></p>
+										<p class="title"><a href="<?=$arSection["SECTION_PAGE_URL"]?>"><?=$arSection["NAME"]?></a></p>
+										
 									</div>
 								</div>
 								<?endif;?>

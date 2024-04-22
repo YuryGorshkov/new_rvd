@@ -11,6 +11,12 @@ $APPLICATION->SetTitle("");
 		"START_FROM" => "0"
 	)
 );?>
+
+<?
+$sort = "DESC";
+if(!empty($_REQUEST["sort_by"])){
+	$sort = "ASC";
+}?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog",
 	"catalog_rvd",
@@ -30,7 +36,7 @@ $APPLICATION->SetTitle("");
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
+		"CACHE_TYPE" => "N",
 		"COMMON_ADD_TO_BASKET_ACTION" => "ADD",
 		"COMMON_SHOW_CLOSE_POPUP" => "N",
 		"COMPATIBLE_MODE" => "N",
@@ -46,12 +52,15 @@ $APPLICATION->SetTitle("");
 		"DETAIL_DISPLAY_NAME" => "Y",
 		"DETAIL_DISPLAY_PREVIEW_TEXT_MODE" => "E",
 		"DETAIL_IMAGE_RESOLUTION" => "16by9",
+		"DETAIL_MAIN_BLOCK_OFFERS_PROPERTY_CODE" => array(),
 		"DETAIL_MAIN_BLOCK_PROPERTY_CODE" => array(),
 		"DETAIL_META_DESCRIPTION" => "-",
 		"DETAIL_META_KEYWORDS" => "-",
+		"DETAIL_OFFERS_FIELD_CODE" => array("",""),
+		"DETAIL_OFFERS_PROPERTY_CODE" => array("",""),
 		"DETAIL_PRODUCT_INFO_BLOCK_ORDER" => "sku,props",
 		"DETAIL_PRODUCT_PAY_BLOCK_ORDER" => "rating,price,priceRanges,quantityLimit,quantity,buttons",
-		"DETAIL_PROPERTY_CODE" => array("",""),
+		"DETAIL_PROPERTY_CODE" => array("","BAR","BAR_GAP","DIAM_IN","DN","R_MIN","WEIGHT","MANUFACTURER","DISCOUNT","PRICE",""),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DETAIL_SET_VIEWED_IN_COMPONENT" => "N",
 		"DETAIL_SHOW_POPULAR" => "Y",
@@ -63,9 +72,9 @@ $APPLICATION->SetTitle("");
 		"DISABLE_INIT_JS_IN_COMPONENT" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"ELEMENT_SORT_FIELD" => "sort",
+		"ELEMENT_SORT_FIELD" => "PROPERTY_PRICE",
 		"ELEMENT_SORT_FIELD2" => "id",
-		"ELEMENT_SORT_ORDER" => "asc",
+		"ELEMENT_SORT_ORDER" => $sort,
 		"ELEMENT_SORT_ORDER2" => "desc",
 		"FILTER_HIDE_ON_MOBILE" => "N",
 		"FILTER_NAME" => "",
@@ -88,7 +97,7 @@ $APPLICATION->SetTitle("");
 		"GIFTS_SHOW_OLD_PRICE" => "Y",
 		"HIDE_NOT_AVAILABLE" => "N",
 		"HIDE_NOT_AVAILABLE_OFFERS" => "N",
-		"IBLOCK_ID" => "21",
+		"IBLOCK_ID" => "23",
 		"IBLOCK_TYPE" => "catalog",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"INSTANT_RELOAD" => "N",
@@ -103,6 +112,8 @@ $APPLICATION->SetTitle("");
 		"LIST_ENLARGE_PRODUCT" => "STRICT",
 		"LIST_META_DESCRIPTION" => "-",
 		"LIST_META_KEYWORDS" => "-",
+		"LIST_OFFERS_FIELD_CODE" => array("",""),
+		"LIST_OFFERS_PROPERTY_CODE" => array("",""),
 		"LIST_PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
 		"LIST_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
 		"LIST_PROPERTY_CODE" => array("",""),
@@ -124,6 +135,13 @@ $APPLICATION->SetTitle("");
 		"MESS_NOT_AVAILABLE_SERVICE" => "Недоступно",
 		"MESS_PRICE_RANGES_TITLE" => "Цены",
 		"MESS_PROPERTIES_TAB" => "Характеристики",
+		"OFFERS_CART_PROPERTIES" => array(),
+		"OFFERS_SORT_FIELD" => "sort",
+		"OFFERS_SORT_FIELD2" => "id",
+		"OFFERS_SORT_ORDER" => "asc",
+		"OFFERS_SORT_ORDER2" => "desc",
+		"OFFER_ADD_PICT_PROP" => "-",
+		"OFFER_TREE_PROPS" => array(),
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -136,6 +154,7 @@ $APPLICATION->SetTitle("");
 		"PRICE_CODE" => array("BASE"),
 		"PRICE_VAT_INCLUDE" => "Y",
 		"PRICE_VAT_SHOW_VALUE" => "N",
+		"PRODUCT_DISPLAY_MODE" => "N",
 		"PRODUCT_ID_VARIABLE" => "id",
 		"PRODUCT_PROPERTIES" => array(),
 		"PRODUCT_PROPS_VARIABLE" => "prop",
@@ -154,7 +173,7 @@ $APPLICATION->SetTitle("");
 		"SECTION_BACKGROUND_IMAGE" => "-",
 		"SECTION_COUNT_ELEMENTS" => "Y",
 		"SECTION_ID_VARIABLE" => "SECTION_ID",
-		"SECTION_TOP_DEPTH" => "2",
+		"SECTION_TOP_DEPTH" => "3",
 		"SEF_MODE" => "N",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "N",
@@ -179,6 +198,8 @@ $APPLICATION->SetTitle("");
 		"TOP_ELEMENT_SORT_ORDER2" => "desc",
 		"TOP_ENLARGE_PRODUCT" => "STRICT",
 		"TOP_LINE_ELEMENT_COUNT" => "3",
+		"TOP_OFFERS_FIELD_CODE" => array("",""),
+		"TOP_OFFERS_PROPERTY_CODE" => array("",""),
 		"TOP_PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
 		"TOP_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
 		"TOP_PROPERTY_CODE" => array("",""),
@@ -207,5 +228,4 @@ $APPLICATION->SetTitle("");
 		"USE_STORE" => "N",
 		"VARIABLE_ALIASES" => Array("ELEMENT_ID"=>"ELEMENT_ID","SECTION_ID"=>"SECTION_ID")
 	)
-);?>
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -215,6 +215,32 @@ $(document).ready(function() {
     document.getElementById('modal_product_id').value = this.dataset.prodid;
     console.log(this);
   });
+  $(".see_more_filters").click(function() {
+    if(this.classList.contains('active')) {
+      document.getElementById('more_filters_'+this.dataset.target).style = "display: none";
+      this.innerHTML = "Развернуть";
+      this.style = "grid-row: 2/3;";
+      this.classList.remove("active");
+    } else {
+      document.getElementById('more_filters_'+this.dataset.target).style = "display: grid; grid-row: 2/3;";
+      this.innerHTML = "Свернуть";
+      this.style = "grid-row: 3/4;";
+      this.classList.add("active");
+    }
+  });
+
+
+  $(".logo").click(function() {
+    if(window.location.href == "https://newrvd.akticom-dev.ru/") {
+      window.scrollTo({
+        top: 0,  // это координат где должен быть экран
+        behavior: 'smooth'  //Это анимация
+    })
+    } else {
+      window.location.href = "/"
+    }
+    
+  });
 
   var parent = document.querySelector(".range-slider");
   if (!parent) return;

@@ -74,7 +74,7 @@ else
 				if (CModule::IncludeModule("iblock")):				
 					$res = CIBlockSection::GetByID($sectionListParams["SECTION_ID"]);
 					if($ar_res = $res->GetNext())
-						$is_last = ($ar_res["DEPTH_LEVEL"] == $arParams["SECTION_TOP_DEPTH"]);
+						$is_last = ($ar_res["DEPTH_LEVEL"] >= ($arParams["SECTION_TOP_DEPTH"] - 1));
 				endif;
 
 				if (!$is_last) {

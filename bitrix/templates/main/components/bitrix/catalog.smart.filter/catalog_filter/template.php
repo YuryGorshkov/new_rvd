@@ -103,22 +103,73 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");
 							default://CHECKBOXES
 							?>
 							<div class="values_container">
-								<?foreach($arItem["VALUES"] as $val => $ar):?>
-									<span data-role="label_<?=$ar["CONTROL_ID"]?>" class="bx-filter-param-label <? echo $ar["DISABLED"] ? 'disabled': '' ?>" for="<? echo $ar["CONTROL_ID"] ?>">											
-										<input
-											type="checkbox"
-											value="<? echo $ar["HTML_VALUE"] ?>"
-											name="<? echo $ar["CONTROL_NAME"] ?>"
-											id="<? echo $ar["CONTROL_ID"] ?>"
-											<? echo $ar["CHECKED"]? 'checked="checked"': '' ?>
-											onclick="smartFilter.click(this)"
-										/>
-										<label style="font-weight: 400;" title="<?=$ar["VALUE"];?>"><?=$ar["VALUE"];?><?
-										if ($arParams["DISPLAY_ELEMENT_COUNT"] !== "N" && isset($ar["ELEMENT_COUNT"])):
-											?>&nbsp;(<span data-role="count_<?=$ar["CONTROL_ID"]?>"><? echo $ar["ELEMENT_COUNT"]; ?></span>)<?
-										endif;?></label>											
-									</span>										
-								<?endforeach;?>
+								<?if(count($arItem["VALUES"]) <= 8):?>
+									<?foreach($arItem["VALUES"] as $val => $ar):?>
+										<span data-role="label_<?=$ar["CONTROL_ID"]?>" class="bx-filter-param-label <? echo $ar["DISABLED"] ? 'disabled': '' ?>" for="<? echo $ar["CONTROL_ID"] ?>">											
+											<input
+												type="checkbox"
+												value="<? echo $ar["HTML_VALUE"] ?>"
+												name="<? echo $ar["CONTROL_NAME"] ?>"
+												id="<? echo $ar["CONTROL_ID"] ?>"
+												<? echo $ar["CHECKED"]? 'checked="checked"': '' ?>
+												onclick="smartFilter.click(this)"
+											/>
+											<label style="font-weight: 400;" title="<?=$ar["VALUE"];?>"><?=$ar["VALUE"];?><?
+											if ($arParams["DISPLAY_ELEMENT_COUNT"] !== "N" && isset($ar["ELEMENT_COUNT"])):
+												?>&nbsp;(<span data-role="count_<?=$ar["CONTROL_ID"]?>"><? echo $ar["ELEMENT_COUNT"]; ?></span>)<?
+											endif;?></label>											
+										</span>										
+									<?endforeach;?>
+								<?else:?>
+									<?$i = 0;?>		
+									<div class="more" id="more_<?=$arItem["ID"]?>">							
+										<?foreach($arItem["VALUES"] as $val => $ar):?>
+											<?$i++;?>
+											<?if($i <= 8):?>
+												<?if($i == 1):?>
+													<div class="base_filters" id="base_filters_<?=$arItem["ID"]?>">
+												<?endif;?>
+												<span data-role="label_<?=$ar["CONTROL_ID"]?>" class="bx-filter-param-label <? echo $ar["DISABLED"] ? 'disabled': '' ?>" for="<? echo $ar["CONTROL_ID"] ?>">											
+													<input
+														type="checkbox"
+														value="<? echo $ar["HTML_VALUE"] ?>"
+														name="<? echo $ar["CONTROL_NAME"] ?>"
+														id="<? echo $ar["CONTROL_ID"] ?>"
+														<? echo $ar["CHECKED"]? 'checked="checked"': '' ?>
+														onclick="smartFilter.click(this)"
+													/>
+													<label style="font-weight: 400;" title="<?=$ar["VALUE"];?>"><?=$ar["VALUE"];?><?
+													if ($arParams["DISPLAY_ELEMENT_COUNT"] !== "N" && isset($ar["ELEMENT_COUNT"])):
+														?>&nbsp;(<span data-role="count_<?=$ar["CONTROL_ID"]?>"><? echo $ar["ELEMENT_COUNT"]; ?></span>)<?
+													endif;?></label>											
+												</span>			
+											<?else:?>
+												<?if($i == 9):?>
+													</div>
+													<p class="see_more_filters" data-target="<?=$arItem["ID"]?>">Развернуть</p>
+													<div class="more_filters" id="more_filters_<?=$arItem["ID"]?>">
+												<?endif;?>
+												<span data-role="label_<?=$ar["CONTROL_ID"]?>" class="bx-filter-param-label <? echo $ar["DISABLED"] ? 'disabled': '' ?>" for="<? echo $ar["CONTROL_ID"] ?>">											
+													<input
+														type="checkbox"
+														value="<? echo $ar["HTML_VALUE"] ?>"
+														name="<? echo $ar["CONTROL_NAME"] ?>"
+														id="<? echo $ar["CONTROL_ID"] ?>"
+														<? echo $ar["CHECKED"]? 'checked="checked"': '' ?>
+														onclick="smartFilter.click(this)"
+													/>
+													<label style="font-weight: 400;" title="<?=$ar["VALUE"];?>"><?=$ar["VALUE"];?><?
+													if ($arParams["DISPLAY_ELEMENT_COUNT"] !== "N" && isset($ar["ELEMENT_COUNT"])):
+														?>&nbsp;(<span data-role="count_<?=$ar["CONTROL_ID"]?>"><? echo $ar["ELEMENT_COUNT"]; ?></span>)<?
+													endif;?></label>											
+												</span>			
+												<?if($i == count($arItem["VALUES"])):?>
+													</div>
+												<?endif;?>
+											<?endif;?>
+										<?endforeach;?>
+									</div>
+								<?endif;?>
 							</div>
 						<?
 						}

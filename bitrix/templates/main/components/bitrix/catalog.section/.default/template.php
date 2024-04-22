@@ -118,78 +118,114 @@ $arParams['MESS_BTN_LAZY_LOAD'] = $arParams['MESS_BTN_LAZY_LOAD'] ?: Loc::getMes
 
 $obName = 'ob'.preg_replace('/[^a-zA-Z0-9_]/', 'x', $this->GetEditAreaId($navParams['NavNum']));
 $containerName = 'container-'.$navParams['NavNum'];
+$value = (empty($_REQUEST["sort_by"])) ? "price" : "";
 ?>		
 		
 <div class="products">
 	<div class="sort">
+		<h2 style="font-size: 24px; margin-right: auto; margin-bottom: 0;">Таблица модификаций <?=CIBlockSection::GetByID($arResult["ITEMS"][0]["IBLOCK_SECTION_ID"])->GetNext()['NAME']?></h2>
 		<div class="dropdown">
 			<button id="sort_menu_title" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 				Сортировать по
 			</button>
 			<ul class="dropdown-menu" id="sort_menu" aria-labelledby="dropdownMenuButton1">
-				<li><a class="dropdown-item" href="#">Цене</a></li>
-				<li><a class="dropdown-item" href="#">Популярности</a></li>
+				<li><a class="dropdown-item" href="<?=$APPLICATION->GetCurPageParam("sort_by=".$value, array("sort_by"))?>">Цене</a></li>				
 			</ul>
 		</div>
 		<p>Количество товаров: <span id="count_products"><?=count($arResult["ITEMS"])?></span></p>
 	</div>
 	<div class="row big_row">
 		<div class="col">
-			Диаметр
+			Название
+			
 		</div>
 		<div class="col">
-			Название
+			Артикул
+		</div>
+		<div class="col">
+			Бренд
+		</div>		
+		<div class="col">
+			DN, мм
+			<p class="aditeonal_text" style="width: 215px;">DN - внутренний диаметр</p>
+		</div>
+		<div class="col">
+			D (внутр),"
+			<p class="aditeonal_text" style="width: 110px;">D - диаметр</p>
+		</div>
+		<div class="col">
+			Bar
+			<p class="aditeonal_text" style="width: 130px;">Bar - давление</p>
+		</div>
+		<div class="col">
+			Bar<br>На разрыв
+			<p class="aditeonal_text" style="width: 300px;">Bar на разрыв - давление на разрыв</p>
+		</div>
+		<div class="col">
+			R(min),<br>мм
+			<p class="aditeonal_text" style="width: 335px;">R min - Минимальный радиус изгиба, мм</p>
+		</div>
+		<div class="col">
+			Вес,кг/м
 		</div>
 		<div class="col">
 			Цена
 		</div>
-		<div class="col">
-			В корзину
-		</div>
 	</div>
-	<?
-	$arFilter = Array('IBLOCK_ID'=>$arParams["IBLOCK_ID"], 'GLOBAL_ACTIVE'=>'Y', 'SECTION_ID'=>$arParams["PERSONAL_SECTION_ID"]);
-	$db_list = CIBlockSection::GetList(Array($by=>$order), $arFilter, true);
-	
-	echo $db_list->NavPrint($arIBTYPE["SECTION_NAME"]);
-	while($ar_result = $db_list->GetNext())
-	{
-	?>
+	<?foreach($arResult["ITEMS"] as $arItem):?>
 		<div class="row row_products big_row">
-			<div class="col title">
-				<?=$ar_result["NAME"]?>
+			<div class="col">
+				<div class="row">
+					<a href="<?=$arItem["DETAIL_PAGE_URL"]?>">
+						<?=$arItem["NAME"]?>
+					</a> 
+				</div>
 			</div>
 			<div class="col">
-				<?foreach($arResult["ITEMS"] as $arItem):?>
-					<?if($arItem["~IBLOCK_SECTION_ID"] == $ar_result["ID"]):?>
-						<div class="row">
-							<a href="<?=$arItem["DETAIL_PAGE_URL"]?>">
-								<?=$arItem["NAME"]?>
-							</a> 
-						</div>
-					<?endif;?>
-				<?endforeach;?>
+				<div class="row">
+					<?=$arItem["CODE"]?>
+				</div>
 			</div>
 			<div class="col">
-				<?foreach($arResult["ITEMS"] as $arItem):?>
-					<?if($arItem["~IBLOCK_SECTION_ID"] == $ar_result["ID"]):?>
-						<div class="row">
-							<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?> руб.
-						</div>
-					<?endif;?>
-				<?endforeach;?>
+				<div class="row">
+					<?=$arItem["PROPERTIES"]["MANUFACTURER"]["VALUE"]?>
+				</div>
+			</div>			
+			<div class="col">
+				<div class="row">
+					<?=$arItem["PROPERTIES"]["DN"]["VALUE"]?>
+				</div>
 			</div>
 			<div class="col">
-				<?foreach($arResult["ITEMS"] as $arItem):?>
-					<?if($arItem["~IBLOCK_SECTION_ID"] == $ar_result["ID"]):?>
-						<div class="row">
-							<button class="to_cart" data-target="<?=$arItem["ID"]?>"></button> 
-						</div>
-					<?endif;?>
-				<?endforeach;?>
+				<div class="row">
+					<?=$arItem["PROPERTIES"]["DIAM_IN"]["VALUE"]?>
+				</div>
+			</div>
+			<div class="col">
+				<div class="row">
+					<?=$arItem["PROPERTIES"]["BAR"]["VALUE"]?>
+				</div>
+			</div>
+			<div class="col">
+				<div class="row">
+					<?=$arItem["PROPERTIES"]["BAR_GAP"]["VALUE"]?>
+				</div>
+			</div>
+			<div class="col">
+				<div class="row">
+					<?=$arItem["PROPERTIES"]["R_MIN"]["VALUE"]?>
+				</div>
+			</div>
+			<div class="col">
+				<div class="row">
+					<?=$arItem["PROPERTIES"]["WEIGHT"]["VALUE"]?>
+				</div>
+			</div>
+			<div class="col">
+				<div class="row">
+					<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?> <?=(!empty($arItem["PROPERTIES"]["PRICE"]["VALUE"])) ? 'руб.' : ''?>
+				</div>
 			</div>
 		</div>	
-	<?
-	}			
-	?>			
+	<?endforeach?>			
 </div>

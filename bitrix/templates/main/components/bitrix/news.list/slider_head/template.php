@@ -46,7 +46,7 @@ $this->setFrameMode(true);
 			</button>
 		</div>
 	</div>
-	<div class="cards">
+	<?/*<div class="cards">
 		<div class="card">
 			<img src="<?=SITE_TEMPLATE_PATH?>/img/small-img_1.png" alt="">
 			<?$APPLICATION->IncludeComponent(
@@ -86,7 +86,7 @@ $this->setFrameMode(true);
 				)
 			);?>
 		</div>
-	</div>
+	</div>*/?>
 </div>
 
 

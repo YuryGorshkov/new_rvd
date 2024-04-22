@@ -131,8 +131,8 @@ $containerName = 'container-'.$navParams['NavNum'];
 							<img src="<?=CFile::GetPath($arItem["PROPERTIES"]["IMAGE_1"]["VALUE"])?>" alt="">
 						</div>
 						<p class="in_stock">В наличии</p>
-						<p class="title"><?=$arItem["NAME"]?></p>
-						<button class="to_cart">Приобрести</button>
+						<p class="title"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></p>
+						<button class="add_to_cart to_cart" data-prodid="<?=$arItem["NAME"]."|".$arItem["CODE"]?>" data-bs-toggle="modal" data-bs-target="#footerModal2">Приобрести</button>
 					</div>             
 				</div>
 			<?endforeach;?>

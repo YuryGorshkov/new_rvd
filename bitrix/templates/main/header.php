@@ -109,7 +109,7 @@ global $USER;
       </div>
       <div class="container">
         <ul class="nav_menu">
-          <li class="menu-item"><a href="#catalog">Каталог</a></li>
+          <li class="menu-item"><a href="/catalog/">Каталог</a></li>
           <li class="menu-item"><a href="#company">О компании</a></li>
           <li class="menu-item"><a href="#tehno">Оплата</a></li>
           <li class="menu-item"><a href="#dostavka">Доставка</a></li>

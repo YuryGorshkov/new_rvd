@@ -76,9 +76,9 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 												<?if($arChildSection["DEPTH_LEVEL"] == 3 && $arChildSection["IBLOCK_SECTION_ID"] == $arSection["ID"]):?>
 													<?$i++;?>
 													<?if($i <= 5):?>										
-														<li><?=$arChildSection["NAME"]?></li>										
+														<li><a href="<?=$arChildSection["SECTION_PAGE_URL"]?>"><?=$arChildSection["NAME"]?></a></li>										
 													<?else:?>
-														<li>Показать ещё</li>
+														<li><a href="<?=$arSection["SECTION_PAGE_URL"]?>">Показать ещё</a></li>
 														<?break;?>
 													<?endif;?>
 												<?endif;?>
